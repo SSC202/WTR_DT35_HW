@@ -42,7 +42,7 @@ void uart_send(uint8_t channel1[], uint8_t channel2[], uint8_t channel3[], uint8
     for (int i = 0; i < 4; i++) {
         uart_send_buffer[i + 18] = channel4[i];
     }
-    uart_send_buffer[22] = 0xBB;
-    uart_send_buffer[23] = 0xAA;
+    uart_send_buffer[22] = 0xCC;
+    uart_send_buffer[23] = 0xDD;
     HAL_UART_Transmit_DMA(&huart1, uart_send_buffer, 24);
 }
